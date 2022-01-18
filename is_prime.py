@@ -7,3 +7,6 @@ def is_prime(n):
     if n % i == 0:
       return False
   return True
+for i in range(200):
+  if is_prime(i)
+    print(i, end=' ')
