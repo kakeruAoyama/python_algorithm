@@ -1,10 +1,10 @@
-def fibonacci(n):
-    if n == 0:
-        return 1
-    elif n == 1:
-        return 1
-    else:
-        return fibonacci( n - 1 ) + fibonacci( n - 2 )
+memo = {1: 1, 2: 1}
 
-for i in range(8):
-    print(fibonacci(i))
+def fibonacci(n):
+    if n in memo:
+        return memo[n]
+
+    memo[n] = fibonacci(n - 2) + fibonacci(n - 1)
+    return memo[n]
+
+print(fibonacci(10))
