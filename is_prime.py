@@ -8,5 +8,5 @@ def is_prime(n):
       return False
   return True
 for i in range(200):
-  if is_prime(i)
+  if is_prime(i):
     print(i, end=' ')
